@@ -19,6 +19,8 @@
 - Request Method：`GET`
 - Query 参数：`page`、`page_size`；本实验采集时依次请求 `page=1..100`，`page_size=50`。
 
+![Device API 发现证据](images/01_device_api.png)
+
 
 ### 1.2 Company：判断静态加载
 
@@ -114,6 +116,8 @@ device_count = int(details["设备数量"].replace(" 台", ""))
 - “下一页” selector：`nav.pagination a:last-of-type`
 - 第 1 页 `href` 示例：`/companies?page=2`
 
+![Company 下一页元素](images/03_company_next.png)
+
 
 ### 4.2 关键代码
 
@@ -148,6 +152,8 @@ next_url = urljoin(current_url, next_href)
 | 唯一 `device_id` | 5000 |
 | Company–Device 不一致企业数 | 0 |
 
+![最终验证结果](images/04_validation.png)
+
 
 ### 5.2 一致性检查关键代码
 
@@ -172,4 +178,4 @@ for company in companies:
 
 ## 实验结论
 
-动态加载页面的初始 HTML 不含业务记录，应通过 Network 找到 API 后使用 JSON 分页参数采集；静态加载页面可直接请求 HTML，再由 BeautifulSoup 和 CSS Selector 解析。API 分页依赖 `page`、`page_size` 与 `total` 自动计算页数，HTML 分页则从当前页面读取“下一页”链接。实验通过总数、ID 唯一性和 Company–Device 设备数量比对验证采集结果。
+本实验先通过源代码和 Network 判断加载方式：Device 使用 API，通过 `total` 与 `page_size` 自动分页采集；Company 直接解析 HTML，并读取“下一页” `href` 连续翻页。随后用总数、ID 去重及 Company–Device 设备数比对完成验证，并保存 JSON 结果。
