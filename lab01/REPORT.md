@@ -2,9 +2,9 @@
 
 ## 学生信息
 
-- **姓名：** ZYC
+- **姓名：** 臧曳晨
 - **学号：** 112404260112
-- **班级：** 数据1241
+- **班级：** 数据科学与大数据技术1241班
 - **GitHub 用户名：** KilluaZoldyck101
 - **仓库地址：** https://github.com/KilluaZoldyck101/bigdata-collection-labs-112404260112
 
