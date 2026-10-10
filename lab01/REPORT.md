@@ -19,7 +19,6 @@
 - Request Method：`GET`
 - Query 参数：`page`、`page_size`；本实验采集时依次请求 `page=1..100`，`page_size=50`。
 
-![Device API 发现证据](images/01_device_api.png)
 
 ### 1.2 Company：判断静态加载
 
@@ -115,7 +114,6 @@ device_count = int(details["设备数量"].replace(" 台", ""))
 - “下一页” selector：`nav.pagination a:last-of-type`
 - 第 1 页 `href` 示例：`/companies?page=2`
 
-![Company 下一页元素](images/03_company_next.png)
 
 ### 4.2 关键代码
 
@@ -150,7 +148,6 @@ next_url = urljoin(current_url, next_href)
 | 唯一 `device_id` | 5000 |
 | Company–Device 不一致企业数 | 0 |
 
-![最终验证结果](images/04_validation.png)
 
 ### 5.2 一致性检查关键代码
 
