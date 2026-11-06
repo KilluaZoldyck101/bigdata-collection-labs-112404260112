@@ -12,7 +12,7 @@
 
 本实验使用 `requests` 请求安居客教学站，用 BeautifulSoup 和 CSS 选择器提取房源的 8 个字段；再从页面的“下一页”链接连续采集，去重后保存为 CSV，最后用 PyMySQL 批量写入课程 MySQL，并核对 CSV 与数据库数据。实验文件为 `anjuke.ipynb` 和 `data/houseinfo.csv`。
 
-实验在课程 Docker 环境中的 JupyterLab 完成，Python 使用 `requests`、`beautifulsoup4`、`csv`、`urllib.parse` 和 `pymysql`。MySQL 服务名为 `mysql`，端口为 `3306`，数据库为 `smartpark_lab`。课程工作区在 JupyterLab 中显示为 `/home/pwuser/workspace/lab02/`，本次整理使用其对应的 D 盘文件。本文依据已保存的 Notebook 输出和 CSV 撰写，没有重新运行采集或入库程序。公开提交的 Notebook 将原代码中的课程数据库密码改为从 `SMARTPARK_DB_PASSWORD` 环境变量读取；如需重新执行数据库单元，应先在本机运行环境设置该变量，不要把密码写回 Notebook 或提交 `.env`。
+实验在课程 Docker 环境中的 JupyterLab 完成，Python 使用 `requests`、`beautifulsoup4`、`csv`、`urllib.parse` 和 `pymysql`。MySQL 服务名为 `mysql`，端口为 `3306`，数据库为 `smartpark_lab`。
 
 ## 二、第一阶段：MySQL 环境检查与建表
 
