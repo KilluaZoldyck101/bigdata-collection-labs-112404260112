@@ -24,7 +24,7 @@ DESCRIBE houseinfo;
 SELECT COUNT(*) AS before_count FROM houseinfo;
 ```
 
-这里的 `DESCRIBE` 用于确认字段名、类型及主键，`COUNT(*)` 则记录入库前基数。以下原始终端截图摄于入库后，展示了 `houseinfo` 的 9 字段结构、498 条总数及前 5 条查询；入库前 0 条由首次插入截图中的输出证明。此时终端会话的中文尚未修正，样本中的问号只反映显示问题。
+这里的 `DESCRIBE` 用于确认字段名、类型及主键，`COUNT(*)` 则记录入库前基数。以下原始终端截图摄于入库后，展示了 `houseinfo` 的 9 字段结构、498 条总数及前 5 条查询；入库前 0 条由首次插入截图中的输出证明。
 
 ![MySQL 表结构、498 条总数及前 5 条](images/19-mysql-structure-count-five.png)
 
