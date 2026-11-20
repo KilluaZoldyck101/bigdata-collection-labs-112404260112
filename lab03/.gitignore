@@ -1,0 +1,15 @@
+# 原始邮件、私人附件和登录信息仅保留在本地。
+private_data/
+attachments/
+attachments_playwright/
+.env
+config.ini
+.auth/
+playwright/.auth/
+auth.json
+state.json
+*storage_state*.json
+user-data/
+__pycache__/
+.ipynb_checkpoints/
+*.crdownload
